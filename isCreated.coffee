@@ -22,6 +22,7 @@ Meteor.startup ->
     )(_name, _partial)
 
 
+@Template ?= {}
 Template.isCreated = (names...) ->
   for name in names
     return false unless declaredTemplates.get(name) and createdTemplates.get(name)
